@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Calculadora</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ display }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col (click)="addToDisplay('1')">1</ion-col>
+          <ion-col (click)="addToDisplay('2')">2</ion-col>
+          <ion-col (click)="addToDisplay('3')">3</ion-col>
+          <ion-col (click)="addToDisplay('+')">+</ion-col>
+          <ion-col (click)="addToDisplay('-')">-</ion-col> 
+        </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <ion-row>
+          <ion-col (click)="addToDisplay('4')">4</ion-col>
+          <ion-col (click)="addToDisplay('5')">5</ion-col>
+          <ion-col (click)="addToDisplay('6')">6</ion-col>
+          <ion-col (click)="addToDisplay('/')">/</ion-col>
+          <ion-col (click)="addToDisplay('*')">*</ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <ion-row>
+          <ion-col (click)="addToDisplay('7')">7</ion-col>
+          <ion-col (click)="addToDisplay('8')">8</ion-col>
+          <ion-col (click)="addToDisplay('9')">9</ion-col>
+          <ion-col (click)="backspace()">⌫</ion-col>
+          <ion-col (click)="calculateResult()">=</ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
